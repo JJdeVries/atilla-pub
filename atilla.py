@@ -8,7 +8,7 @@ try :
 except ImportError :
     pass 
 _OOO00OO000O00OOOO ={Move .UP :np .array ([0 ,1 ],dtype =np .int16 ),Move .RIGHT :np .array ([1 ,0 ],dtype =np .int16 ),Move .LEFT :np .array ([-1 ,0 ],dtype =np .int16 ),Move .DOWN :np .array ([0 ,-1 ],dtype =np .int16 ),Move .STAY :np .array ([0 ,0 ],dtype =np .int16 ),}
-def _O0OOOO00OOO0OO00O (OO0O0OOO00OO0O0O0 :np .ndarray [np .int16 ])->list [np .int16 ]:
+def _O0OOOO00OOO0OO00O (OO0O0OOO00OO0O0O0                          )                   :
     OO0OO0000O000O0OO =[]
     OOO00O000O0O0OO00 =np .bincount (OO0O0OOO00OO0O0O0 .flatten ())
     for OO0OOO00OOO0O0OOO ,O0O0OO00O0OO00000 in enumerate (OOO00O000O0O0OO00 ):
@@ -23,26 +23,26 @@ class _O00O0OOO00O0000O0 (enum .Enum ):
 class AtillaTheAttacker :
     def __init__ (OO00O000OO00OO000 ):
         OO00O000OO00OO000 .target =None 
-        OO00O000OO00OO000 .position :np .ndarray [np .int16 ]=np .array ([0 ,0 ],dtype =np .int16 )
-        OO00O000OO00OO000 .id :int =0 
+        OO00O000OO00OO000 .position                          =np .array ([0 ,0 ],dtype =np .int16 )
+        OO00O000OO00OO000 .id      =0 
     @property 
-    def __OO000O00O0OOO0O00 (OO0OO00OO00O0O0O0 )->np .int16 :
+    def __OO000O00O0OOO0O00 (OO0OO00OO00O0O0O0 )            :
         return OO0OO00OO00O0O0O0 .position [0 ]
     @property 
-    def __O00O00O000000O0OO (O00O0OOO0OOO000O0 )->np .int16 :
+    def __O00O00O000000O0OO (O00O0OOO0OOO000O0 )            :
         return O00O0OOO0OOO000O0 .position [1 ]
-    def __OO0O0OO0O0O00O0OO (OO00OO000O000OO00 ,OOO00OOOO0OO0OO00 :int )->_O00O0OOO00O0000O0 :
+    def __OO0O0OO0O0O00O0OO (OO00OO000O000OO00 ,OOO00OOOO0OO0OO00      )                     :
         if OOO00OOOO0OO0OO00 ==0 :
             return _O00O0OOO00O0000O0 .Claim 
         O000000O0O00O0O0O =(OO00OO000O000OO00 .id -OOO00OOOO0OO0OO00 )%3 
         O0000O0O000O0000O =_O00O0OOO00O0000O0 (O000000O0O00O0O0O )
         return O0000O0O000O0000O 
-    def __O000O00OO0O00OOOO (O0O0O0O00OO000000 ,OOO000000OOO0O0O0 ,O0O00000OO0OOO0OO :np .ndarray [np .int16 ])->tuple [_O00O0OOO00O0000O0 ,np .int16 ]:
+    def __O000O00OO0O00OOOO (O0O0O0O00OO000000 ,OOO000000OOO0O0O0 ,O0O00000OO0OOO0OO                          )                                        :
         OOOO0O00OOO00O0OO =O0O0O0O00OO000000 .position +_OOO00OO000O00OOOO [OOO000000OOO0O0O0 ]
         O0O0OO00OO0OO00O0 =O0O00000OO0OOO0OO [OOOO0O00OOO00O0OO [1 ]][OOOO0O00OOO00O0OO [0 ]]
         return O0O0O0O00OO000000 .__OO0O0OO0O0O00O0OO (O0O0OO00OO0OO00O0 ),O0O0OO00OO0OO00O0 
-    def __OO000O000OO00O0O0 (OO0O0O000O00OOOO0 ,OOOO0OO00O0O0O00O :int )->list [Move ]:
-        O0O00O000O0000000 :list [Move ]=[]
+    def __OO000O000OO00O0O0 (OO0O0O000O00OOOO0 ,OOOO0OO00O0O0O00O      )              :
+        O0O00O000O0000000              =[]
         if OO0O0O000O00OOOO0 .__OO000O00O0OOO0O00 >0 :
             O0O00O000O0000000 .append (Move .LEFT )
         if OO0O0O000O00OOOO0 .__OO000O00O0OOO0O00 <OOOO0OO00O0O0O00O -1 :
@@ -72,12 +72,12 @@ class AtillaTheAttacker :
         if O0O00O000O0O00O0O is None :
             O0O00O000O0O00O0O =np .array ([random .randint (0 ,OO00OOO000OOO0O00 .shape [0 ]-1 ),random .randint (0 ,OO00OOO000OOO0O00 .shape [0 ]-1 ),],dtype =np .int16 ,)
         return O0O00O000O0O00O0O 
-    def determine_next_move (OOOO0000O00O00O0O ,O00OO00O0OOOOOOO0 :np .ndarray [np .int16 ],O0OOOOO000OO0OOO0 :list [dict [str ,int |np .ndarray [np .int16 ]]],OOO0OOO0OOO00O0OO :World .GameInfo ,):
+    def determine_next_move (OOOO0000O00O00O0O ,O00OO00O0OOOOOOO0                          ,O0OOOOO000OO0OOO0                                                  ,OOO0OOO0OOO00O0OO                  ,):
         OO00O0000O000OO00 =_O0OOOO00OOO0OO00O (O00OO00O0OOOOOOO0 )
         O0O0000O0OOOO0000 =OOOO0000O00O00O0O .__OO000O000OO00O0O0 (O00OO00O0OOOOOOO0 .shape [0 ])
         if any (np .array_equal (OOOO00O0OOOO000O0 ["position"],OOOO0000O00O00O0O .position )for OOOO00O0OOOO000O0 in O0OOOOO000OO0OOO0 ):
             O0O0000O0OOOO0000 .remove (Move .STAY )
-        OO0O00O0OO0OOOOO0 :dict [_O00O0OOO00O0000O0 ,list [tuple [Move ,np .int16 ]]]={}
+        OO0O00O0OO0OOOOO0                                                            ={}
         for O0000OOOO0O0O0O00 in O0O0000O0OOOO0000 :
             OO0OO0O000O0OO00O ,OOO00OO0O0OOOO00O =OOOO0000O00O00O0O .__O000O00OO0O00OOOO (O0000OOOO0O0O0O00 ,O00OO00O0OOOOOOO0 )
             if OO0OO0O000O0OO00O in OO0O00O0OO0OOOOO0 :
@@ -86,7 +86,7 @@ class AtillaTheAttacker :
                 OO0O00O0OO0OOOOO0 [OO0OO0O000O0OO00O ]=[(O0000OOOO0O0O0O00 ,OOO00OO0O0OOOO00O )]
         for OO0OO0O000O0OO00O in (_O00O0OOO00O0000O0 .Take ,_O00O0OOO00O0000O0 .Claim ):
             if OO0OO0O000O0OO00O in OO0O00O0OO0OOOOO0 :
-                OO0OO00OO0O0OO0OO :int =-1 
+                OO0OO00OO0O0OO0OO      =-1 
                 OO000O0O0O00000OO =None 
                 OO00OO0OO000000O0 =[]
                 for O0000OOOO0O0O0O00 ,OOO00OO0O0OOOO00O in OO0O00O0OO0OOOOO0 [OO0OO0O000O0OO00O ]:
@@ -99,7 +99,7 @@ class AtillaTheAttacker :
                 return OO000O0O0O00000OO 
         OO00O00OOOO0O0O0O =OOOO0000O00O00O0O .__OOOO000O0O000O000 (O00OO00O0OOOOOOO0 )
         return OO00O00OOOO0O0O0O 
-    def __OOOO000O0O000O000 (O00OOOO0OO00OO00O ,OO0OO00OO0O000OOO )->Move :
+    def __OOOO000O0O000O000 (O00OOOO0OO00OO00O ,OO0OO00OO0O000OOO )       :
         OOO0O0O0000OO0OOO =O00OOOO0OO00OO00O .__O0O00O0OOOO0O0OO0 (OO0OO00OO0O000OOO )
         if OOO0O0O0000OO0OOO [0 ]>O00OOOO0OO00OO00O .position [0 ]:
             return Move .RIGHT 
