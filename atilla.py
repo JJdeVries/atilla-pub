@@ -52,7 +52,7 @@ class AtillaTheAttacker :
             O00OOOOO0O00OOO0O .append (Move .UP )
         return O00OOOOO0O00OOO0O 
     def get_name (O00OOOOO0OO00O0O0 ):
-        return "WIP: Atilla the Agressor"
+        return "Atilla the Attacker"
     def get_contributor (OOO0OOO00OO0O0O0O ):
         return "Jorik de Vries"
     def __OOO00OOOOOOOO0000 (O000OO0000OOO0O00 ,O000O00O0O000OO00 ,O0OO0O0O000O0O0O0 ):
